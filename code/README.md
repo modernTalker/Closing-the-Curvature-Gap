@@ -1,5 +1,7 @@
 # Code
 
+Detailed instructions can be found here: https://github.com/modernTalker/transformer_hessian.git
+
 This repository contains source code for our paper. The code includes data processing, model building, and visualization of results.
 
 > [!IMPORTANT]
