@@ -30,20 +30,31 @@
 
 ## Abstract
 
-Training a neural network involves searching for the minimum point of the loss function, which defines the surface in the space of model parameters. 
-    The properties of this surface are determined by the chosen architecture, the loss function, and the training data. 
-    Existing studies show that as the number of objects in the sample increases, the surface of the loss function ceases to change significantly. 
-    The paper obtains an estimate for the convergence of the surface of the loss function for the transformer architecture of a neural network with attention layers, as well as conducts computational experiments that confirm the obtained theoretical results. 
-    In this paper, we propose a theoretical estimate for the minimum sample size required to train a model with any predetermined acceptable error, providing experiments that prove the theoretical boundaries.
+The lack of theoretical results for Layer Normalization and feedforward Hessians
+has left a gap in the study of Transformer optimization landscapes. We address
+this by deriving explicit second-order expressions for these components, thereby
+completing the Hessian characterization of full Transformer blocks. Our results
+generalize prior self-attention analyses and yield estimations for the role of each
+sublayer in curvature propagation. We demonstrate how these Hessian structures
+inform both convergence dynamics and the empirical scaling laws governing largemodel performance. 
+Further, we propose a Taylor-expansion–based framework 
+for analyzing loss differences to quantify convergence trajectories. By extending
+Hessian theory to the full Transformer architecture, this work establishes a new
+foundation for theoretical and empirical investigations of optimization in large-scale
+deep learning.
 
 ## Citation
 
 If you find our work helpful, please cite us.
 ```BibTeX
-@article{citekey,
-    title={Convergence of the loss function surface in transformer neural network architectures},
-    author={Egor Petrov, Nikita Kiselev (consultant), Andrey Grabovoy (advisor)},
-    year={2025}
+@misc{petrov2025closingcurvaturegaptransformer,
+      title={Closing the Curvature Gap: Full Transformer Hessians and Their Implications for Scaling Laws}, 
+      author={Egor Petrov and Nikita Kiselev and Vladislav Meshkov and Andrey Grabovoy},
+      year={2025},
+      eprint={2510.16927},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.16927}, 
 }
 ```
 
